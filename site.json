@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "id": "site_5bd1f2b8",
+  "id": "site_e25846f7",
   "name": "My Blog",
   "tagline": "Thoughts, stories and ideas.",
   "description": "My Blog — a blog about the things I care about.",
@@ -11,19 +11,19 @@
   },
   "template": "minimal",
   "theme": {
-    "primary": "#000000",
-    "accent": "#facc15",
-    "background": "#fdfdfd",
-    "surface": "#f1f1f1",
-    "text": "#000000",
-    "muted": "#444444",
-    "headingFont": "Syne",
-    "bodyFont": "Space Grotesk",
-    "radius": "none",
+    "primary": "#4f46e5",
+    "accent": "#f59e0b",
+    "background": "#ffffff",
+    "surface": "#f8fafc",
+    "text": "#0f172a",
+    "muted": "#64748b",
+    "headingFont": "Inter",
+    "bodyFont": "Inter",
+    "radius": "md",
     "mode": "auto",
-    "spacing": "relaxed",
+    "spacing": "normal",
     "layout": "grid",
-    "containerWidth": "wide"
+    "containerWidth": "normal"
   },
   "nav": [
     {
@@ -37,16 +37,20 @@
     {
       "label": "About",
       "href": "/about/"
+    },
+    {
+      "label": "New link",
+      "href": "/"
     }
   ],
   "pages": [
     {
-      "id": "page_f4d5406b",
+      "id": "page_a3c0ee66",
       "slug": "",
       "title": "Home",
       "sections": [
         {
-          "id": "sec_db2f26e5",
+          "id": "sec_5b67e170",
           "type": "hero",
           "props": {
             "title": "My Blog",
@@ -57,7 +61,7 @@
           }
         },
         {
-          "id": "sec_32d4a723",
+          "id": "sec_c96d7dc5",
           "type": "posts",
           "props": {
             "title": "Latest posts",
@@ -66,7 +70,7 @@
           }
         },
         {
-          "id": "sec_6992de12",
+          "id": "sec_781462ba",
           "type": "newsletter",
           "props": {
             "title": "Stay in the loop",
@@ -80,12 +84,12 @@
       "order": 0
     },
     {
-      "id": "page_973e5e49",
+      "id": "page_4559ff14",
       "slug": "about",
       "title": "About",
       "sections": [
         {
-          "id": "sec_f456c335",
+          "id": "sec_eba41733",
           "type": "about",
           "props": {
             "title": "About",
@@ -100,7 +104,7 @@
   ],
   "posts": [
     {
-      "id": "post_6e12ff93",
+      "id": "post_a7b4b30f",
       "slug": "welcome-to-the-blog",
       "title": "Welcome to the blog",
       "excerpt": "A quick hello and what to expect from My Blog.",
@@ -108,12 +112,12 @@
       "tags": [
         "welcome"
       ],
-      "date": "2026-09-03T08:30:53.571Z",
+      "date": "2026-09-03T09:25:04.430Z",
       "draft": false,
       "featured": true
     },
     {
-      "id": "post_d9b95ff2",
+      "id": "post_310153cb",
       "slug": "three-things-i-learned-this-week",
       "title": "Three things I learned this week",
       "excerpt": "Small lessons, big impact.",
@@ -122,12 +126,12 @@
         "notes",
         "learning"
       ],
-      "date": "2026-08-31T08:30:53.571Z",
+      "date": "2026-08-31T09:25:04.430Z",
       "draft": false,
       "featured": false
     },
     {
-      "id": "post_1a43d160",
+      "id": "post_ddef1f32",
       "slug": "how-this-site-was-made",
       "title": "How this site was made",
       "excerpt": "Built with a no-code AI blog builder and published to GitHub Pages.",
@@ -135,7 +139,7 @@
       "tags": [
         "meta"
       ],
-      "date": "2026-08-26T08:30:53.571Z",
+      "date": "2026-08-26T09:25:04.430Z",
       "draft": false,
       "featured": false
     }
@@ -168,6 +172,6 @@
     "seo": {}
   },
   "images": {},
-  "createdAt": "2026-09-04T08:30:53.571Z",
-  "updatedAt": "2026-09-04T08:40:37.594Z"
+  "createdAt": "2026-09-04T09:25:04.430Z",
+  "updatedAt": "2026-09-04T09:48:43.870Z"
 }
