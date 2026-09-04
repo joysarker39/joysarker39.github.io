@@ -1,0 +1,173 @@
+{
+  "version": 1,
+  "id": "site_5bd1f2b8",
+  "name": "My Blog",
+  "tagline": "Thoughts, stories and ideas.",
+  "description": "My Blog — a blog about the things I care about.",
+  "language": "en",
+  "author": {
+    "name": "Author",
+    "bio": "Writer of this blog."
+  },
+  "template": "minimal",
+  "theme": {
+    "primary": "#000000",
+    "accent": "#facc15",
+    "background": "#fdfdfd",
+    "surface": "#f1f1f1",
+    "text": "#000000",
+    "muted": "#444444",
+    "headingFont": "Syne",
+    "bodyFont": "Space Grotesk",
+    "radius": "none",
+    "mode": "auto",
+    "spacing": "relaxed",
+    "layout": "grid",
+    "containerWidth": "wide"
+  },
+  "nav": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Posts",
+      "href": "/posts/"
+    },
+    {
+      "label": "About",
+      "href": "/about/"
+    }
+  ],
+  "pages": [
+    {
+      "id": "page_f4d5406b",
+      "slug": "",
+      "title": "Home",
+      "sections": [
+        {
+          "id": "sec_db2f26e5",
+          "type": "hero",
+          "props": {
+            "title": "My Blog",
+            "subtitle": "Thoughts, stories and ideas.",
+            "ctaLabel": "Read the blog",
+            "ctaHref": "/posts/",
+            "align": "center"
+          }
+        },
+        {
+          "id": "sec_32d4a723",
+          "type": "posts",
+          "props": {
+            "title": "Latest posts",
+            "count": 6,
+            "showExcerpt": true
+          }
+        },
+        {
+          "id": "sec_6992de12",
+          "type": "newsletter",
+          "props": {
+            "title": "Stay in the loop",
+            "text": "Get new posts in your inbox.",
+            "buttonLabel": "Subscribe",
+            "actionUrl": ""
+          }
+        }
+      ],
+      "showInNav": true,
+      "order": 0
+    },
+    {
+      "id": "page_973e5e49",
+      "slug": "about",
+      "title": "About",
+      "sections": [
+        {
+          "id": "sec_f456c335",
+          "type": "about",
+          "props": {
+            "title": "About",
+            "text": "Hi! I'm the author of this blog. Tell readers who you are and why you write.",
+            "image": ""
+          }
+        }
+      ],
+      "showInNav": true,
+      "order": 1
+    }
+  ],
+  "posts": [
+    {
+      "id": "post_6e12ff93",
+      "slug": "welcome-to-the-blog",
+      "title": "Welcome to the blog",
+      "excerpt": "A quick hello and what to expect from My Blog.",
+      "content": "## Hello there\n\nThis is your first post. You can edit it, delete it, or ask the AI assistant to rewrite it.\n\nHere's what you can do next:\n\n- **Pick a template** in the Design tab\n- **Write a post** in the Posts tab (or let AI draft one)\n- **Publish** to GitHub Pages in one click\n\n> Tip: everything you change is previewed live.",
+      "tags": [
+        "welcome"
+      ],
+      "date": "2026-09-03T08:30:53.571Z",
+      "draft": false,
+      "featured": true
+    },
+    {
+      "id": "post_d9b95ff2",
+      "slug": "three-things-i-learned-this-week",
+      "title": "Three things I learned this week",
+      "excerpt": "Small lessons, big impact.",
+      "content": "Every week I try to write down a few things I learned. Here are this week's.\n\n### 1. Start before you're ready\n\nWaiting for the perfect moment is a great way to never start.\n\n### 2. Keep it simple\n\nThe simplest version of an idea is usually the one people remember.\n\n### 3. Share it\n\nWriting in public is the fastest way to learn.",
+      "tags": [
+        "notes",
+        "learning"
+      ],
+      "date": "2026-08-31T08:30:53.571Z",
+      "draft": false,
+      "featured": false
+    },
+    {
+      "id": "post_1a43d160",
+      "slug": "how-this-site-was-made",
+      "title": "How this site was made",
+      "excerpt": "Built with a no-code AI blog builder and published to GitHub Pages.",
+      "content": "This site was created with **Blog Builder** — no code required.\n\n1. Described the blog in a sentence\n2. Chose a template and a color style\n3. Hit publish\n\nThe whole thing is static HTML, so it loads fast and costs nothing to host.",
+      "tags": [
+        "meta"
+      ],
+      "date": "2026-08-26T08:30:53.571Z",
+      "draft": false,
+      "featured": false
+    }
+  ],
+  "footer": {
+    "text": "© 2026 My Blog",
+    "links": [],
+    "social": []
+  },
+  "settings": {
+    "customCss": "",
+    "customHead": "",
+    "customDomain": "",
+    "analytics": {
+      "provider": "none",
+      "id": ""
+    },
+    "comments": {
+      "provider": "none",
+      "repo": "",
+      "repoId": "",
+      "category": "",
+      "categoryId": ""
+    },
+    "showSearch": true,
+    "showRss": true,
+    "showDarkToggle": true,
+    "showReadingTime": true,
+    "postsPerPage": 10,
+    "seo": {}
+  },
+  "images": {},
+  "createdAt": "2026-09-04T08:30:53.571Z",
+  "updatedAt": "2026-09-04T08:40:37.594Z"
+}

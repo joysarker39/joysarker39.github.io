@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>/</loc></url>
+  <url><loc>/about/</loc></url>
+  <url><loc>/posts/</loc></url>
+  <url><loc>/posts/welcome-to-the-blog/</loc></url>
+  <url><loc>/posts/three-things-i-learned-this-week/</loc></url>
+  <url><loc>/posts/how-this-site-was-made/</loc></url>
+  <url><loc>/tags/learning/</loc></url>
+  <url><loc>/tags/meta/</loc></url>
+  <url><loc>/tags/notes/</loc></url>
+  <url><loc>/tags/welcome/</loc></url>
+</urlset>
