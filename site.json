@@ -142,6 +142,17 @@
       "date": "2026-08-26T09:25:04.430Z",
       "draft": false,
       "featured": false
+    },
+    {
+      "id": "post_1d672f24",
+      "slug": "this-is-my-first-post",
+      "title": "This is my first post",
+      "excerpt": "Hello \n  ehllo hello",
+      "content": "# Hello \n  ehllo hello",
+      "tags": [],
+      "date": "2026-09-08T09:00:00.000Z",
+      "draft": false,
+      "coverImage": "Nice"
     }
   ],
   "footer": {
@@ -157,21 +168,21 @@
       "provider": "none",
       "id": ""
     },
+    "showSearch": true,
+    "showRss": true,
+    "showDarkToggle": true,
+    "showReadingTime": true,
+    "postsPerPage": 10,
+    "seo": {},
     "comments": {
       "provider": "none",
       "repo": "",
       "repoId": "",
       "category": "",
       "categoryId": ""
-    },
-    "showSearch": true,
-    "showRss": true,
-    "showDarkToggle": true,
-    "showReadingTime": true,
-    "postsPerPage": 10,
-    "seo": {}
+    }
   },
   "images": {},
   "createdAt": "2026-09-04T09:25:04.430Z",
-  "updatedAt": "2026-09-04T09:48:43.870Z"
+  "updatedAt": "2026-09-08T18:38:53.442Z"
 }

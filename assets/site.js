@@ -1,9 +1,7 @@
-
 (function () {
   "use strict";
   var root = document.body.getAttribute("data-root") || "./";
 
-  // Mobile nav toggle
   var navToggle = document.querySelector("[data-nav-toggle]");
   var nav = document.querySelector("[data-site-nav]");
   if (navToggle && nav) {
@@ -19,7 +17,6 @@
     });
   }
 
-  // Copy buttons on code blocks
   document.querySelectorAll("pre > code").forEach(function (code) {
     var pre = code.parentElement;
     if (!pre || pre.querySelector(".copy-btn")) return;
@@ -40,31 +37,20 @@
         navigator.clipboard.writeText(text).then(done, done);
       } else {
         var ta = document.createElement("textarea");
-        ta.value = text;
-        ta.style.position = "fixed";
-        ta.style.opacity = "0";
-        document.body.appendChild(ta);
-        ta.select();
+        ta.value = text; ta.style.position = "fixed"; ta.style.opacity = "0";
+        document.body.appendChild(ta); ta.select();
         try { document.execCommand("copy"); } catch (e) {}
-        document.body.removeChild(ta);
-        done();
+        document.body.removeChild(ta); done();
       }
     });
   });
 
-
-  // Dark mode toggle (persisted)
   var STORAGE_KEY = "bb-theme-mode";
   var darkToggle = document.querySelector("[data-dark-toggle]");
-  function applyStored() {
-    try {
-      var stored = localStorage.getItem(STORAGE_KEY);
-      if (stored === "dark" || stored === "light") {
-        document.documentElement.setAttribute("data-theme", stored);
-      }
-    } catch (e) {}
-  }
-  applyStored();
+  try {
+    var stored = localStorage.getItem(STORAGE_KEY);
+    if (stored === "dark" || stored === "light") document.documentElement.setAttribute("data-theme", stored);
+  } catch (e) {}
   if (darkToggle) {
     darkToggle.addEventListener("click", function () {
       var current = document.documentElement.getAttribute("data-theme");
@@ -76,25 +62,16 @@
     });
   }
 
-
-  // Client-side search
   var searchInputs = document.querySelectorAll("[data-search-input]");
   if (searchInputs.length) {
-    var searchDataPromise = window.__BB_SEARCH_DATA__
-      ? Promise.resolve(window.__BB_SEARCH_DATA__)
-      : fetch(root + "search.json").then(function (r) { return r.json(); }).catch(function () { return []; });
-
+    var searchDataPromise = fetch(root + "search.json").then(function (r) { return r.json(); }).catch(function () { return []; });
     searchInputs.forEach(function (input) {
-      var resultsEl = document.querySelector(input.getAttribute("data-search-input") || "[data-search-results]") ||
-        document.querySelector("[data-search-results]");
+      var resultsEl = document.querySelector(input.getAttribute("data-search-input") || "[data-search-results]") || document.querySelector("[data-search-results]");
       function render(items, query) {
         if (!resultsEl) return;
         if (!query) { resultsEl.innerHTML = ""; resultsEl.hidden = true; return; }
         resultsEl.hidden = false;
-        if (!items.length) {
-          resultsEl.innerHTML = '<p class="search-empty">No results for "' + query.replace(/</g, "&lt;") + '"</p>';
-          return;
-        }
+        if (!items.length) { resultsEl.innerHTML = '<p class="search-empty">No results for "' + query.replace(/</g, "&lt;") + '"</p>'; return; }
         resultsEl.innerHTML = items.slice(0, 20).map(function (item) {
           var href = root + String(item.url || "").replace(/^\//, "");
           var title = String(item.title || "").replace(/</g, "&lt;");
@@ -106,13 +83,11 @@
         var q = input.value.trim().toLowerCase();
         searchDataPromise.then(function (data) {
           var items = !q ? [] : data.filter(function (item) {
-            var hay = (item.title + " " + item.excerpt + " " + (item.tags || []).join(" ")).toLowerCase();
-            return hay.indexOf(q) !== -1;
+            return (item.title + " " + item.excerpt + " " + (item.tags || []).join(" ")).toLowerCase().indexOf(q) !== -1;
           });
           render(items, q);
         });
       });
     });
   }
-
 })();
