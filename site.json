@@ -104,6 +104,17 @@
   ],
   "posts": [
     {
+      "id": "post_36aad913",
+      "slug": "test",
+      "title": "test",
+      "excerpt": "test",
+      "content": "seta",
+      "tags": [],
+      "date": "2026-09-09T09:00:00.000Z",
+      "draft": false,
+      "featured": false
+    },
+    {
       "id": "post_a7b4b30f",
       "slug": "welcome-to-the-blog",
       "title": "Welcome to the blog",
@@ -152,6 +163,7 @@
       "tags": [],
       "date": "2026-09-08T09:00:00.000Z",
       "draft": false,
+      "featured": false,
       "coverImage": "Nice"
     }
   ],
@@ -184,5 +196,5 @@
   },
   "images": {},
   "createdAt": "2026-09-04T09:25:04.430Z",
-  "updatedAt": "2026-09-08T18:38:53.442Z"
+  "updatedAt": "2026-09-09T00:50:19.105Z"
 }
