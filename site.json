@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "id": "site_e25846f7",
+  "id": "site_64367207",
   "name": "My Blog",
   "tagline": "Thoughts, stories and ideas.",
   "description": "My Blog — a blog about the things I care about.",
@@ -11,46 +11,60 @@
   },
   "template": "minimal",
   "theme": {
-    "primary": "#4f46e5",
-    "accent": "#f59e0b",
-    "background": "#ffffff",
-    "surface": "#f8fafc",
-    "text": "#0f172a",
-    "muted": "#64748b",
-    "headingFont": "Inter",
+    "primary": "#818cf8",
+    "accent": "#22d3ee",
+    "background": "#0b1020",
+    "surface": "#141a2e",
+    "text": "#e5e7eb",
+    "muted": "#9ca3af",
+    "headingFont": "Space Grotesk",
     "bodyFont": "Inter",
     "radius": "md",
-    "mode": "auto",
+    "mode": "dark",
     "spacing": "normal",
     "layout": "grid",
     "containerWidth": "normal"
   },
   "nav": [
     {
-      "label": "Home",
-      "href": "/"
+      "label": "About",
+      "href": "/about/"
     },
     {
       "label": "Posts",
       "href": "/posts/"
     },
     {
-      "label": "About",
-      "href": "/about/"
-    },
-    {
-      "label": "New link",
+      "label": "Home",
       "href": "/"
     }
   ],
   "pages": [
     {
-      "id": "page_a3c0ee66",
+      "id": "page_042d3420",
+      "slug": "about",
+      "title": "About",
+      "sections": [
+        {
+          "id": "sec_e0eaac7b",
+          "type": "about",
+          "props": {
+            "title": "About",
+            "text": "Hi! I'm the author of this blog. Tell readers who you are and why you write.",
+            "image": ""
+          }
+        }
+      ],
+      "showInNav": true,
+      "order": 0
+    },
+    {
+      "id": "page_dd580963",
       "slug": "",
       "title": "Home",
       "sections": [
         {
-          "id": "sec_5b67e170",
+          "id": "sec_e525c116",
           "type": "hero",
           "props": {
             "title": "My Blog",
@@ -61,7 +75,7 @@
           }
         },
         {
-          "id": "sec_c96d7dc5",
+          "id": "sec_9553da46",
           "type": "posts",
           "props": {
             "title": "Latest posts",
@@ -70,7 +84,7 @@
           }
         },
         {
-          "id": "sec_781462ba",
+          "id": "sec_d059a8ac",
           "type": "newsletter",
           "props": {
             "title": "Stay in the loop",
@@ -81,41 +95,23 @@
         }
       ],
       "showInNav": true,
-      "order": 0
-    },
-    {
-      "id": "page_4559ff14",
-      "slug": "about",
-      "title": "About",
-      "sections": [
-        {
-          "id": "sec_eba41733",
-          "type": "about",
-          "props": {
-            "title": "About",
-            "text": "Hi! I'm the author of this blog. Tell readers who you are and why you write.",
-            "image": ""
-          }
-        }
-      ],
-      "showInNav": true,
       "order": 1
     }
   ],
   "posts": [
     {
-      "id": "post_36aad913",
-      "slug": "test",
-      "title": "test",
-      "excerpt": "test",
-      "content": "seta",
+      "id": "post_04b99b52",
+      "slug": "untitled-post",
+      "title": "Untitled post",
+      "excerpt": "",
+      "content": "",
       "tags": [],
-      "date": "2026-09-09T09:00:00.000Z",
-      "draft": false,
-      "featured": false
+      "date": "2026-09-04T09:48:30.023Z",
+      "draft": true,
+      "coverImage": "img:img_063a7f93"
     },
     {
-      "id": "post_a7b4b30f",
+      "id": "post_4f5e1ca2",
       "slug": "welcome-to-the-blog",
       "title": "Welcome to the blog",
       "excerpt": "A quick hello and what to expect from My Blog.",
@@ -123,12 +119,12 @@
       "tags": [
         "welcome"
       ],
-      "date": "2026-09-03T09:25:04.430Z",
+      "date": "2026-09-03T09:47:20.478Z",
       "draft": false,
       "featured": true
     },
     {
-      "id": "post_310153cb",
+      "id": "post_7121fb40",
       "slug": "three-things-i-learned-this-week",
       "title": "Three things I learned this week",
       "excerpt": "Small lessons, big impact.",
@@ -137,12 +133,12 @@
         "notes",
         "learning"
       ],
-      "date": "2026-08-31T09:25:04.430Z",
+      "date": "2026-08-31T09:47:20.478Z",
       "draft": false,
       "featured": false
     },
     {
-      "id": "post_ddef1f32",
+      "id": "post_afe6f025",
       "slug": "how-this-site-was-made",
       "title": "How this site was made",
       "excerpt": "Built with a no-code AI blog builder and published to GitHub Pages.",
@@ -150,21 +146,9 @@
       "tags": [
         "meta"
       ],
-      "date": "2026-08-26T09:25:04.430Z",
+      "date": "2026-08-26T09:47:20.478Z",
       "draft": false,
       "featured": false
-    },
-    {
-      "id": "post_1d672f24",
-      "slug": "this-is-my-first-post",
-      "title": "This is my first post",
-      "excerpt": "Hello \n  ehllo hello",
-      "content": "# Hello \n  ehllo hello",
-      "tags": [],
-      "date": "2026-09-08T09:00:00.000Z",
-      "draft": false,
-      "featured": false,
-      "coverImage": "Nice"
     }
   ],
   "footer": {
@@ -180,21 +164,30 @@
       "provider": "none",
       "id": ""
     },
-    "showSearch": true,
-    "showRss": true,
-    "showDarkToggle": true,
-    "showReadingTime": true,
-    "postsPerPage": 10,
-    "seo": {},
     "comments": {
       "provider": "none",
       "repo": "",
       "repoId": "",
       "category": "",
       "categoryId": ""
+    },
+    "showSearch": true,
+    "showRss": true,
+    "showDarkToggle": true,
+    "showReadingTime": true,
+    "postsPerPage": 10,
+    "seo": {}
+  },
+  "images": {
+    "img_063a7f93": {
+      "id": "img_063a7f93",
+      "name": "aahlc8ivbnmk0t3eyz8as5gvr.svg",
+      "type": "image/webp",
+      "dataUrl": "data:image/webp;base64,UklGRpIDAABXRUJQVlA4WAoAAAAwAAAANwAADQAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZBTFBIrAAAAAFHIBBI4SYXEREMONm2TTY1v2dD/OyiRnRJqkQkqfsSaV+cs877v2eGE9H/CUC7DV0FIC3QOiRgug5/ICihfPafwgYEkNgjESAgaMmXx/S00ohoOpWmUp8IorfF10dlh+f3Qe/7M60H0TyQFV02HbNcq1mKZ/WWQGR6tGlBatGDdT5EAKbHfJHP+v18I3SMQwZWetTH7sC6FVTTihOp3jaE3yUCBAD9f4RrzxtWUDgg8AAAAFAHAJ0BKjgADgA+USKNRKOiIRgMBAA4BQS2AE6ZQeQa4HVV9QH4v/qu+A8wHQA/UngAPQA/QD0n/2z+BHygAJtlrYAA/vCbQ/up1ZYqcj/oG9LUYPpfB/jm59zxogXa5nlwAB/C+qxmXYP9/PK3P5etz+HStkuaEHpxFV6iWrLc1/vf79pdXDop/IhpVpOYf+O3wdFEbih/SVFumtLKGH8yDX8Tyzn+E/xgu6fjczsOtKonf3zkG/burI+tXkMJYkO+w1xr7jplIceerPqN0aX0t8pFPXdGdYXwjdc8Jef1D497+0zZAPPpa7//QAAAAA==",
+      "width": 56,
+      "height": 14
     }
   },
-  "images": {},
-  "createdAt": "2026-09-04T09:25:04.430Z",
-  "updatedAt": "2026-09-09T00:50:46.720Z"
+  "createdAt": "2026-09-04T09:47:20.477Z",
+  "updatedAt": "2026-09-10T19:43:46.245Z"
 }

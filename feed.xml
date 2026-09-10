@@ -5,29 +5,12 @@
   <link>/</link>
   <description>My Blog — a blog about the things I care about.</description>
   <language>en</language>
-  <lastBuildDate>Wed, 09 Sep 2026 00:50:48 GMT</lastBuildDate>
-  <item>
-    <title>test</title>
-    <link>/posts/test/</link>
-    <guid isPermaLink="false">/posts/test/</guid>
-    <pubDate>Wed, 09 Sep 2026 09:00:00 GMT</pubDate>
-    <description>test</description>
-
-  </item>
-  <item>
-    <title>This is my first post</title>
-    <link>/posts/this-is-my-first-post/</link>
-    <guid isPermaLink="false">/posts/this-is-my-first-post/</guid>
-    <pubDate>Tue, 08 Sep 2026 09:00:00 GMT</pubDate>
-    <description>Hello 
-  ehllo hello</description>
-
-  </item>
+  <lastBuildDate>Thu, 10 Sep 2026 19:44:06 GMT</lastBuildDate>
   <item>
     <title>Welcome to the blog</title>
     <link>/posts/welcome-to-the-blog/</link>
     <guid isPermaLink="false">/posts/welcome-to-the-blog/</guid>
-    <pubDate>Thu, 03 Sep 2026 09:25:04 GMT</pubDate>
+    <pubDate>Thu, 03 Sep 2026 09:47:20 GMT</pubDate>
     <description>A quick hello and what to expect from My Blog.</description>
     <category>welcome</category>
   </item>
@@ -35,7 +18,7 @@
     <title>Three things I learned this week</title>
     <link>/posts/three-things-i-learned-this-week/</link>
     <guid isPermaLink="false">/posts/three-things-i-learned-this-week/</guid>
-    <pubDate>Mon, 31 Aug 2026 09:25:04 GMT</pubDate>
+    <pubDate>Mon, 31 Aug 2026 09:47:20 GMT</pubDate>
     <description>Small lessons, big impact.</description>
     <category>notes</category>
     <category>learning</category>
@@ -44,7 +27,7 @@
     <title>How this site was made</title>
     <link>/posts/how-this-site-was-made/</link>
     <guid isPermaLink="false">/posts/how-this-site-was-made/</guid>
-    <pubDate>Wed, 26 Aug 2026 09:25:04 GMT</pubDate>
+    <pubDate>Wed, 26 Aug 2026 09:47:20 GMT</pubDate>
     <description>Built with a no-code AI blog builder and published to GitHub Pages.</description>
     <category>meta</category>
   </item>
