@@ -15,7 +15,7 @@
     "accent": "#10b981",
     "background": "#ffffff",
     "surface": "#ffffff",
-    "text": "#0000ff",
+    "text": "#000000",
     "muted": "#9ca3af",
     "headingFont": "Space Grotesk",
     "bodyFont": "Inter",
@@ -201,12 +201,12 @@
     }
   },
   "createdAt": "2026-09-04T09:47:20.477Z",
-  "updatedAt": "2026-09-11T04:54:47.629Z",
+  "updatedAt": "2026-09-11T04:55:52.527Z",
   "publish": {
     "repo": "joysarker39.github.io",
     "branch": "main",
     "lastPublishedAt": "2026-09-10T19:44:16.757Z",
     "lastPublishedUrl": "https://joysarker39.github.io/"
   },
-  "lastPublishedCommit": "1685b3a0d6421eef86b281ae83f2f57fc87be3f5"
+  "lastPublishedCommit": "26759863602760427df47cd1383c49a79d774c52"
 }
