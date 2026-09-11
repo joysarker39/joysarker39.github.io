@@ -103,11 +103,11 @@
       "id": "post_04b99b52",
       "slug": "untitled-post",
       "title": "Untitled post",
-      "excerpt": "afasdfasdf...",
+      "excerpt": "asdasadasdasdasddddddddddddddd",
       "content": "afasdfasdf",
       "tags": [],
       "date": "2026-09-04T09:48:30.023Z",
-      "draft": true,
+      "draft": false,
       "featured": false,
       "coverImage": "img:img_063a7f93"
     },
@@ -190,7 +190,7 @@
     }
   },
   "createdAt": "2026-09-04T09:47:20.477Z",
-  "updatedAt": "2026-09-11T01:23:58.414Z",
+  "updatedAt": "2026-09-11T01:24:51.230Z",
   "publish": {
     "repo": "joysarker39.github.io",
     "branch": "main",
