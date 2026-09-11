@@ -11,7 +11,7 @@
   },
   "template": "minimal",
   "theme": {
-    "primary": "#818cf8",
+    "primary": "#059669",
     "accent": "#22d3ee",
     "background": "#0b1020",
     "surface": "#141a2e",
@@ -190,7 +190,7 @@
     }
   },
   "createdAt": "2026-09-04T09:47:20.477Z",
-  "updatedAt": "2026-09-11T01:24:51.230Z",
+  "updatedAt": "2026-09-11T01:25:28.486Z",
   "publish": {
     "repo": "joysarker39.github.io",
     "branch": "main",
