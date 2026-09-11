@@ -5,7 +5,15 @@
   <link>/</link>
   <description>My Blog — a blog about the things I care about.</description>
   <language>en</language>
-  <lastBuildDate>Fri, 11 Sep 2026 04:56:27 GMT</lastBuildDate>
+  <lastBuildDate>Fri, 11 Sep 2026 04:57:02 GMT</lastBuildDate>
+  <item>
+    <title>test</title>
+    <link>/posts/test-2/</link>
+    <guid isPermaLink="false">/posts/test-2/</guid>
+    <pubDate>Fri, 11 Sep 2026 09:00:00 GMT</pubDate>
+    <description>test</description>
+
+  </item>
   <item>
     <title>Test</title>
     <link>/posts/test/</link>
