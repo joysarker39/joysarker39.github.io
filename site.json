@@ -176,8 +176,18 @@
   ],
   "footer": {
     "text": "© 2026 My Blog",
-    "links": [],
-    "social": []
+    "links": [
+      {
+        "label": "FB",
+        "href": "https://facebook.com"
+      }
+    ],
+    "social": [
+      {
+        "label": "Facebook",
+        "href": "https://facebook.com"
+      }
+    ]
   },
   "settings": {
     "customCss": "",
@@ -212,12 +222,12 @@
     }
   },
   "createdAt": "2026-09-04T09:47:20.477Z",
-  "updatedAt": "2026-09-11T04:58:49.364Z",
+  "updatedAt": "2026-09-11T05:25:11.965Z",
   "publish": {
     "repo": "joysarker39.github.io",
     "branch": "main",
     "lastPublishedAt": "2026-09-10T19:44:16.757Z",
     "lastPublishedUrl": "https://joysarker39.github.io/"
   },
-  "lastPublishedCommit": "b5ef77bc817728904c5e271de8d9da31c5a2528c"
+  "lastPublishedCommit": "1816426590d0e08b8b79362b3e7164399126d994"
 }
