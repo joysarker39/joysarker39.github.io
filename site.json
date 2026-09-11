@@ -11,13 +11,13 @@
   },
   "template": "minimal",
   "theme": {
-    "primary": "#059669",
-    "accent": "#10b981",
+    "primary": "#e11d48",
+    "accent": "#fb7185",
     "background": "#ffffff",
     "surface": "#ffffff",
     "text": "#000000",
     "muted": "#9ca3af",
-    "headingFont": "Space Grotesk",
+    "headingFont": "Georgia",
     "bodyFont": "Inter",
     "radius": "md",
     "mode": "light",
@@ -212,12 +212,12 @@
     }
   },
   "createdAt": "2026-09-04T09:47:20.477Z",
-  "updatedAt": "2026-09-11T04:57:01.786Z",
+  "updatedAt": "2026-09-11T04:58:49.364Z",
   "publish": {
     "repo": "joysarker39.github.io",
     "branch": "main",
     "lastPublishedAt": "2026-09-10T19:44:16.757Z",
     "lastPublishedUrl": "https://joysarker39.github.io/"
   },
-  "lastPublishedCommit": "6804299c42848fbda7d00bf9ef2f86ad89d500c7"
+  "lastPublishedCommit": "b5ef77bc817728904c5e271de8d9da31c5a2528c"
 }
