@@ -9,20 +9,20 @@
     "name": "Author",
     "bio": "Writer of this blog."
   },
-  "template": "minimal",
+  "template": "pastel",
   "theme": {
-    "primary": "#4f46e5",
-    "accent": "#f59e0b",
-    "background": "#ffffff",
-    "surface": "#f8fafc",
-    "text": "#0f172a",
-    "muted": "#64748b",
-    "headingFont": "Inter",
-    "bodyFont": "Inter",
-    "radius": "md",
-    "mode": "auto",
-    "spacing": "normal",
-    "layout": "grid",
+    "primary": "#f97066",
+    "accent": "#8b5cf6",
+    "background": "#fff7f2",
+    "surface": "#ffeee6",
+    "text": "#2d2a32",
+    "muted": "#7a7280",
+    "headingFont": "Poppins",
+    "bodyFont": "Nunito",
+    "radius": "lg",
+    "mode": "light",
+    "spacing": "roomy",
+    "layout": "cards",
     "containerWidth": "normal"
   },
   "nav": [
@@ -233,12 +233,12 @@
     }
   },
   "createdAt": "2026-09-04T09:47:20.477Z",
-  "updatedAt": "2026-09-12T11:37:50.465Z",
+  "updatedAt": "2026-09-12T11:49:27.018Z",
   "publish": {
     "repo": "joysarker39.github.io",
     "branch": "main",
     "lastPublishedAt": "2026-09-10T19:44:16.757Z",
     "lastPublishedUrl": "https://joysarker39.github.io/"
   },
-  "lastPublishedCommit": "1f13794b0155f6840c2ba034d4b17f5ff094b86a"
+  "lastPublishedCommit": "ca7b4bd7e270556eda883c5943bfae9535f1e713"
 }
