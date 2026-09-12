@@ -100,6 +100,17 @@
   ],
   "posts": [
     {
+      "id": "post_3b6d89fe",
+      "slug": "ioo",
+      "title": "ioo",
+      "excerpt": "ououoi",
+      "content": "i;k;lk",
+      "tags": [],
+      "date": "2026-09-12T09:00:00.000Z",
+      "draft": false,
+      "featured": false
+    },
+    {
       "id": "post_40a17225",
       "slug": "test-2",
       "title": "test",
@@ -222,12 +233,12 @@
     }
   },
   "createdAt": "2026-09-04T09:47:20.477Z",
-  "updatedAt": "2026-09-11T06:26:20.594Z",
+  "updatedAt": "2026-09-12T11:31:51.821Z",
   "publish": {
     "repo": "joysarker39.github.io",
     "branch": "main",
     "lastPublishedAt": "2026-09-10T19:44:16.757Z",
     "lastPublishedUrl": "https://joysarker39.github.io/"
   },
-  "lastPublishedCommit": "2585097422afe23ae6f601c40be4fc49b4b0b0ac"
+  "lastPublishedCommit": "722e4ac7e62e80f077710347c1acf7063cb9467f"
 }
