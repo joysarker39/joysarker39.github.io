@@ -100,6 +100,17 @@
   ],
   "posts": [
     {
+      "id": "post_7ede0fb3",
+      "slug": "ufugu",
+      "title": "Ufugu",
+      "excerpt": "Ifufylckfjfjfj",
+      "content": "Ifufylckfjfjfj",
+      "tags": [],
+      "date": "2026-09-13T09:00:00.000Z",
+      "draft": false,
+      "featured": false
+    },
+    {
       "id": "post_3b6d89fe",
       "slug": "ioo",
       "title": "ioo",
@@ -233,12 +244,12 @@
     }
   },
   "createdAt": "2026-09-04T09:47:20.477Z",
-  "updatedAt": "2026-09-12T13:56:39.173Z",
+  "updatedAt": "2026-09-13T07:42:49.732Z",
   "publish": {
     "repo": "joysarker39.github.io",
     "branch": "main",
     "lastPublishedAt": "2026-09-10T19:44:16.757Z",
     "lastPublishedUrl": "https://joysarker39.github.io/"
   },
-  "lastPublishedCommit": "48b57bcdb7c5fb61314b318cff0ce8f0f4aa3779"
+  "lastPublishedCommit": "d27f14acd7fc4dcfeea554762ee25dc3f268d4cf"
 }
