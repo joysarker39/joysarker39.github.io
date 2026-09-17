@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joy Sarker | CV</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <script>
+    // Set theme before paint to avoid flash
+    (function () {
+      const saved = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = saved || (prefersDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
+
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header>
+    <nav id="navbar" role="navigation">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-brand">Joy Sarker</a>
+        <button id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
+          <i class="fa-solid fa-moon" id="themeIcon"></i>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html#about">about</a></li>
+          <li><a href="index.html#research">research</a></li>
+          <li><a href="index.html#projects">projects</a></li>
+          <li><a href="index.html#experience">experience</a></li>
+          <li><a href="index.html#teaching">teaching</a></li>
+          <li><a href="index.html#awards">awards</a></li>
+          <li><a href="index.html#contact">contact</a></li>
+          <li><a href="cv.html" class="active">cv</a></li>
+        </ul>
+      </div>
+      <!-- Scroll progress bar sits at the bottom of the nav -->
+      <progress id="progress" value="0" max="100"></progress>
+    </nav>
+  </header>
+
+  <!-- ===== MAIN ===== -->
+  <main class="container" role="main">
+    <div class="post">
+
+      <section id="cv">
+        <header class="post-header cv-header">
+          <h1 class="post-title">Curriculum Vitae</h1>
+          <a href="Joy_Sarker_CV.pdf" download class="btn-cv"><i class="fa-solid fa-file-pdf"></i> Download PDF</a>
+        </header>
+
+        <!-- Pages are drawn here by PDF.js, so the viewer works the same on phones and desktops -->
+        <div id="cvPages" class="cv-pages" aria-label="CV pages">
+          <p class="cv-status" id="cvStatus">Loading CV… If it does not appear, <a href="Joy_Sarker_CV.pdf">open the PDF</a>.</p>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-inner">
+      <span>© 2026 Joy Sarker</span>
+      <span>·</span>
+      <span>Last updated: September 2026</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script>
+    (function () {
+      const PDF_URL = 'Joy_Sarker_CV.pdf';
+      const WORKER_URL = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+      const MAX_WIDTH = 850;
+      const TIMEOUT_MS = 12000;
+      const box = document.getElementById('cvPages');
+
+      function fail() {
+        const p = document.createElement('p');
+        p.className = 'cv-status';
+        p.innerHTML = 'The CV could not be displayed here. <a href="' + PDF_URL + '">Open the PDF</a> instead.';
+        box.replaceChildren(p);
+      }
+      if (!window.pdfjsLib) { fail(); return; }
+
+      pdfjsLib.GlobalWorkerOptions.workerSrc = WORKER_URL;
+
+      let pdf = null;
+      let lastWidth = 0;
+      let renderId = 0;
+
+      function withTimeout(promise, ms) {
+        return new Promise(function (resolve, reject) {
+          const t = setTimeout(function () { reject(new Error('timeout')); }, ms);
+          promise.then(
+            function (v) { clearTimeout(t); resolve(v); },
+            function (e) { clearTimeout(t); reject(e); }
+          );
+        });
+      }
+
+      async function renderPage(num, width) {
+        const page = await pdf.getPage(num);
+        const base = page.getViewport({ scale: 1 });
+        const viewport = page.getViewport({ scale: width / base.width });
+        const ratio = window.devicePixelRatio || 1;
+
+        const wrap = document.createElement('div');
+        wrap.className = 'cv-page';
+        wrap.style.width = viewport.width + 'px';
+        wrap.style.height = viewport.height + 'px';
+
+        const canvas = document.createElement('canvas');
+        canvas.width = Math.floor(viewport.width * ratio);
+        canvas.height = Math.floor(viewport.height * ratio);
+        canvas.setAttribute('aria-label', 'CV page ' + num);
+        wrap.appendChild(canvas);
+
+        await page.render({
+          canvasContext: canvas.getContext('2d'),
+          viewport: viewport,
+          transform: ratio !== 1 ? [ratio, 0, 0, ratio, 0, 0] : null,
+        }).promise;
+
+        // Invisible text on top of the drawing, so the CV can be selected, copied, searched and read aloud
+        const textLayer = document.createElement('div');
+        textLayer.className = 'textLayer';
+        wrap.style.setProperty('--scale-factor', viewport.scale);
+        wrap.appendChild(textLayer);
+        await pdfjsLib.renderTextLayer({
+          textContentSource: page.streamTextContent(),
+          container: textLayer,
+          viewport: viewport,
+        }).promise;
+
+        // Keep the PDF's links (email, GitHub, demo…) clickable
+        const annots = await page.getAnnotations();
+        annots.forEach(function (a) {
+          if (a.subtype !== 'Link' || !a.url) return;
+          const r = viewport.convertToViewportRectangle(a.rect);
+          const link = document.createElement('a');
+          link.href = a.url;
+          link.className = 'cv-link';
+          if (!a.url.startsWith('mailto:')) { link.target = '_blank'; link.rel = 'noopener noreferrer'; }
+          link.style.left = Math.min(r[0], r[2]) + 'px';
+          link.style.top = Math.min(r[1], r[3]) + 'px';
+          link.style.width = Math.abs(r[2] - r[0]) + 'px';
+          link.style.height = Math.abs(r[3] - r[1]) + 'px';
+          wrap.appendChild(link);
+        });
+        return wrap;
+      }
+
+      async function renderAll() {
+        if (!box.clientWidth) return;
+        const width = Math.min(box.clientWidth, MAX_WIDTH);
+        if (width === lastWidth) return;
+        const id = ++renderId;
+        const pages = [];
+        for (let i = 1; i <= pdf.numPages; i++) {
+          pages.push(await renderPage(i, width));
+          if (id !== renderId) return;   // a newer render has started
+        }
+        lastWidth = width;
+        box.replaceChildren.apply(box, pages);
+      }
+
+      // disableFontFace draws the text as shapes instead of loading the embedded fonts,
+      // which avoids a stall seen in some browsers when the first page never finished drawing
+      const start = pdfjsLib.getDocument({ url: PDF_URL, disableFontFace: true }).promise
+        .then(function (doc) { pdf = doc; return renderAll(); });
+
+      withTimeout(start, TIMEOUT_MS).catch(fail);
+
+      let timer;
+      window.addEventListener('resize', function () {
+        clearTimeout(timer);
+        timer = setTimeout(function () { if (pdf) renderAll().catch(fail); }, 200);
+      });
+    })();
+  </script>
+</body>
+</html>

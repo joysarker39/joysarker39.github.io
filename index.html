@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="author" content="Joy Sarker" />
+  <meta name="description" content="Joy Sarker — interested in agentic AI: how LLM agents plan, use tools, and verify their own work. Software Engineer II at Therap (BD) Ltd." />
+  <meta name="keywords" content="Joy Sarker, agentic AI, LLM agents, self-verification, LLM tool use, machine learning, software engineer, Bangladesh" />
+  <title>Joy Sarker</title>
+
+  <!-- Open Graph / link previews -->
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="Joy Sarker — Agentic AI" />
+  <meta property="og:description" content="Studying how LLM agents plan, use tools, and verify their own work. Software Engineer II at Therap (BD) Ltd." />
+  <meta property="og:url" content="https://joysarker39.github.io/" />
+  <meta property="og:image" content="https://joysarker39.github.io/profile.jpg" />
+  <meta name="twitter:card" content="summary" />
+
+  <!-- Favicon (inline, no extra request) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%230075b4'/%3E%3Ctext x='50' y='70' font-family='Georgia,serif' font-size='58' fill='white' text-anchor='middle'%3EJ%3C/text%3E%3C/svg%3E" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Slab:wght@300;400;500&display=swap" rel="stylesheet" />
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <script>
+    // Set theme before paint to avoid flash
+    (function () {
+      const saved = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = saved || (prefersDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
+
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header>
+    <nav id="navbar" role="navigation">
+      <div class="nav-inner">
+        <a href="#about" class="nav-brand">Joy Sarker</a>
+        <button id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
+          <i class="fa-solid fa-moon" id="themeIcon"></i>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about" class="active">about</a></li>
+          <li><a href="#research">research</a></li>
+          <li><a href="#projects">projects</a></li>
+          <li><a href="#experience">experience</a></li>
+          <li><a href="#teaching">teaching</a></li>
+          <li><a href="#awards">awards</a></li>
+          <li><a href="#contact">contact</a></li>
+          <li><a href="cv.html">cv</a></li>
+        </ul>
+      </div>
+      <!-- Scroll progress bar sits at the bottom of the nav -->
+      <progress id="progress" value="0" max="100" aria-hidden="true"></progress>
+    </nav>
+  </header>
+
+  <!-- ===== MAIN ===== -->
+  <main class="container" role="main">
+    <div class="post">
+
+      <!-- ===== ABOUT ===== -->
+      <section id="about">
+        <header class="post-header">
+          <h1 class="post-title">
+            <span class="font-bold">Joy</span> Sarker
+          </h1>
+          <p class="desc">
+            Agentic AI · LLM tool use ·
+            Software Engineer II at <a href="https://therapbd.com/" target="_blank" rel="noopener noreferrer">Therap (BD) Ltd.</a>
+          </p>
+        </header>
+
+        <article>
+          <!-- Profile photo (right-float, al-folio style) -->
+          <div class="profile float-right">
+            <img src="profile.jpg" alt="Joy Sarker" class="profile-img" width="440" height="440" />
+            <div class="social-links">
+              <a href="mailto:joysarker39@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+              <a href="https://github.com/joysarker39" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fa-brands fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/joysarker39/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <div class="more-info">
+              <p><i class="fa-solid fa-map-marker-alt"></i> Dhaka, Bangladesh</p>
+              <p><i class="fa-solid fa-envelope"></i> joysarker39 [at] gmail.com</p>
+            </div>
+          </div>
+
+          <div class="clearfix">
+            <p>
+              Hi! I'm <strong>Joy Sarker</strong>. I'm interested in <strong>agentic AI</strong>: systems
+              in which language models plan over several steps, call tools and make changes to real
+              software. I focus on <strong>verification</strong>, meaning how an agent can check that its
+              own output is correct.
+            </p>
+
+            <p>
+              I'm a Software Engineer II at
+              <a href="https://therapbd.com/" target="_blank" rel="noopener noreferrer">Therap (BD) Ltd.</a>,
+              the Bangladesh affiliate of Therap Services, a US company that makes documentation, billing and
+              case-management software for human services providers. I build features in a large production Java
+              codebase with Spring MVC, JSP and JavaScript, and every feature needs JUnit and Playwright tests.
+              I'm currently fixing security issues, where each fix also needs a test that shows it works.
+              Seeing how much a team depends on tests and code review to ship correct code made me wonder
+              how an agent could check its own work in a similar way.
+            </p>
+
+            <p>
+              Before industry, I did competitive programming, with three
+              <strong>ICPC Dhaka Regional Honorable Mentions</strong> and more than 2000 problems solved.
+              In a contest, a solution only counts once it passes the judge's hidden tests, and writing
+              good test cases is a different skill from finding the algorithm. Coding agents face a
+              similar split.
+            </p>
+
+            <p>
+              I hold a B.Sc. in Computer Science and Engineering from
+              <a href="http://www.sub.edu.bd/" target="_blank" rel="noopener noreferrer">State University of Bangladesh</a>
+              with a CGPA of <strong>3.96/4.00</strong>, and received the
+              <strong>Dean's Award (Silver Medal)</strong> at the 6th SUB Convocation in 2022.
+            </p>
+          </div>
+
+        </article>
+      </section>
+
+      <hr />
+
+      <!-- ===== RESEARCH ===== -->
+      <section id="research">
+        <h2>research interests</h2>
+
+        <div class="research-prose">
+          <p>
+            I want to study how agentic systems <strong>verify their own work</strong>. Current coding
+            agents generate plausible patches but often can't tell whether a patch is actually correct
+            or only looks correct. I think <em>choosing</em> the correct solution is harder than
+            <em>generating</em> candidates, and it has received less attention.
+          </p>
+          <p>
+            Production software solves this with scaffolding — tests, review, staged rollout — built
+            precisely because a competent engineer's confidence in their own work is not reliable evidence
+            that it works. Agents largely lack that scaffolding. I'd like to understand what it would take
+            to give it to them, and where self-verification breaks down.
+          </p>
+        </div>
+
+        <div class="interests">
+          <h3 class="sub-heading">directions I'd like to work on</h3>
+          <ul>
+            <li>
+              <strong>Self-verification and critique</strong> — when does an agent's own evaluation of its
+              work correlate with correctness, and when does it fail?
+            </li>
+            <li>
+              <strong>Tool use and environment feedback</strong> — how much does the ability to execute
+              code, read failures, and iterate change outcomes versus one-shot generation?
+            </li>
+            <li>
+              <strong>Evaluation beyond Python</strong> — most agentic coding benchmarks target small
+              Python repositories. Enterprise codebases differ in ways that likely matter: heavy dependency
+              injection, framework-driven control flow, long build cycles.
+            </li>
+            <li>
+              <strong>Planning under cost constraints</strong> — how agents allocate a limited budget of
+              steps, tool calls, and compute across a task.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- ===== PROJECTS ===== -->
+      <section id="projects">
+        <h2>projects</h2>
+
+        <div class="pub-list">
+
+          <!-- Project 1 -->
+          <div class="pub-item">
+            <div class="pub-preview">
+              <div class="pub-icon"><i class="fa-solid fa-sitemap"></i></div>
+            </div>
+            <div class="pub-content">
+              <div class="pub-title">
+                <a href="https://github.com/mazharHuq/Algorithm-visualization" target="_blank" rel="noopener noreferrer">
+                  Algorithm &amp; Data Structure Visualization Engine
+                </a>
+              </div>
+              <div class="pub-authors">Joy Sarker, Mazhar Huq, Kamrunnahar Somapti</div>
+              <div class="pub-venue">B.Sc. Final Year Project · State University of Bangladesh · 2022</div>
+              <p class="pub-abstract">
+                A web app that animates sorting algorithms (bubble, merge and quick sort) and graph
+                algorithms (Dijkstra, BFS, DFS) step by step. Users can enter custom inputs and change
+                the speed to compare best-case and worst-case behavior.
+              </p>
+              <div class="pub-links">
+                <a href="https://github.com/mazharHuq/Algorithm-visualization" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> code</a>
+                <a href="https://mazharhuq.github.io/Algorithm-visualization/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> live demo</a>
+              </div>
+              <div class="pub-tags">
+                <span>JavaScript</span><span>Algorithm Visualization</span><span>Graph Algorithms</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="pub-item">
+            <div class="pub-preview">
+              <div class="pub-icon"><i class="fa-solid fa-robot"></i></div>
+            </div>
+            <div class="pub-content">
+              <div class="pub-title">
+                <a href="https://github.com/joysarker39/CSE-0408-Summer-2021/tree/main/Final" target="_blank" rel="noopener noreferrer">
+                  Decision Tree and k-NN Classification
+                </a>
+              </div>
+              <div class="pub-authors">Joy Sarker</div>
+              <div class="pub-venue">Machine Learning Course Project · State University of Bangladesh · 2021</div>
+              <p class="pub-abstract">
+                Built Decision Tree and k-nearest neighbors classifiers with scikit-learn on a
+                real-world dataset. Encoded categorical features, plotted the decision tree, compared
+                k = 1 to 5 to check for overfitting, and evaluated the models with confusion matrices
+                and classification reports.
+              </p>
+              <div class="pub-links">
+                <a href="https://github.com/joysarker39/CSE-0408-Summer-2021/tree/main/Final" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> code</a>
+                <a href="https://github.com/joysarker39/CSE-0408-Summer-2021/blob/main/Final/UG02-47-18-003-JOY%20SARKER-FINALCSE0408-SUMMER%202021.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-regular fa-file-pdf"></i> report</a>
+              </div>
+              <div class="pub-tags">
+                <span>Python</span><span>Scikit-Learn</span><span>Machine Learning</span><span>Classification</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- ===== EDUCATION ===== -->
+      <section id="education">
+        <h2>education</h2>
+        <div class="edu-list">
+
+          <div class="edu-item">
+            <div class="edu-left">
+              <span class="edu-year">2018 – 2022</span>
+            </div>
+            <div class="edu-right">
+              <h3>B.Sc. in Computer Science and Engineering</h3>
+              <p class="edu-inst"><a href="http://www.sub.edu.bd/" target="_blank" rel="noopener noreferrer">State University of Bangladesh</a> · Dhaka, Bangladesh</p>
+              <p class="edu-detail">CGPA: <strong>3.96 / 4.00</strong> &nbsp;·&nbsp; <strong>Batch Topper</strong> &nbsp;·&nbsp; Merit Scholarship (every semester) &nbsp;·&nbsp; Dean's Award (Silver Medal, 6th Convocation 2022)</p>
+              <p class="edu-courses">
+                <span class="label">Relevant Coursework:</span>
+                Data Structures &amp; Algorithms, Machine Learning, Artificial Intelligence,
+                Database Management Systems, Algorithm Analysis, Theory of Computation,
+                Software Engineering, Computer Networks, Operating Systems,
+                Numerical Methods, Discrete Mathematics, OOP
+              </p>
+            </div>
+          </div>
+
+          <div class="edu-item">
+            <div class="edu-left">
+              <span class="edu-year">2017</span>
+            </div>
+            <div class="edu-right">
+              <h3>Psychology <span class="edu-attended">(one year of coursework)</span></h3>
+              <p class="edu-inst"><a href="http://www.sbpgc.edu.bd/" target="_blank" rel="noopener noreferrer">Shaikh Burhanuddin Post Graduate College</a> · Dhaka, Bangladesh</p>
+              <p class="edu-detail">
+                Studied cognition, perception and learning theory for a year before switching to
+                computer science.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- ===== EXPERIENCE ===== -->
+      <section id="experience">
+        <h2>experience</h2>
+        <div class="edu-list">
+
+          <div class="edu-item">
+            <div class="edu-left">
+              <span class="edu-year">Jun 2025<br/>Present</span>
+            </div>
+            <div class="edu-right">
+              <h3>Software Engineer II</h3>
+              <p class="edu-inst"><a href="https://therapbd.com/" target="_blank" rel="noopener noreferrer">Therap (BD) Ltd.</a> · Dhaka, Bangladesh</p>
+              <ul class="exp-bullets">
+                <li>Develop features with Spring MVC, JSP and JavaScript from Business Requirement Documents (BRDs).</li>
+                <li>Write JUnit unit tests and Playwright end-to-end tests for every feature.</li>
+                <li>Fix security vulnerabilities in the application and write tests that confirm each fix.</li>
+                <li>Redesigned the UI and backend of a core module to make it easier to maintain.</li>
+                <li>Built an interactive tree view of the employee hierarchy.</li>
+              </ul>
+              <p class="tech-stack"><span class="label">Stack:</span> Java · Spring MVC · JSP · Oracle SQL · JavaScript · JUnit · Playwright</p>
+            </div>
+          </div>
+
+          <div class="edu-item">
+            <div class="edu-left">
+              <span class="edu-year">Jun 2023<br/>Jun 2025</span>
+            </div>
+            <div class="edu-right">
+              <h3>Software Engineer</h3>
+              <p class="edu-inst"><a href="https://therapbd.com/" target="_blank" rel="noopener noreferrer">Therap (BD) Ltd.</a> · Dhaka, Bangladesh</p>
+              <ul class="exp-bullets">
+                <li>Reviewed code for internal and external teams.</li>
+                <li>Moved critical business logic from the client to the server to improve security and data integrity.</li>
+                <li>Optimized database queries, reducing execution time by <strong>30%</strong>.</li>
+                <li>Mentored junior developers in Spring and JPA.</li>
+                <li>Worked on a feature that imports data from external sources into a key module.</li>
+              </ul>
+              <p class="tech-stack"><span class="label">Stack:</span> Java · Spring MVC · JPA/Hibernate · Oracle SQL · JDBC</p>
+            </div>
+          </div>
+
+          <div class="edu-item">
+            <div class="edu-left">
+              <span class="edu-year">Jun 2022<br/>Jun 2023</span>
+            </div>
+            <div class="edu-right">
+              <h3>Associate Software Engineer</h3>
+              <p class="edu-inst"><a href="https://therapbd.com/" target="_blank" rel="noopener noreferrer">Therap (BD) Ltd.</a> · Dhaka, Bangladesh</p>
+              <ul class="exp-bullets">
+                <li>Built backend features in Java with the Spring Framework.</li>
+                <li>Wrote and tuned database code with JDBC, Hibernate and Oracle.</li>
+                <li>Built web pages with JSP, Servlets and Spring forms.</li>
+                <li>Implemented session management with Spring session attributes.</li>
+                <li>Automated builds and deployments with Gradle.</li>
+              </ul>
+              <p class="tech-stack"><span class="label">Stack:</span> Java · Spring · JSP · Hibernate · Gradle · Agile</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- ===== TEACHING & SERVICE ===== -->
+      <section id="teaching">
+        <h2>teaching &amp; service</h2>
+        <div class="news-table">
+          <table>
+            <tr>
+              <th>Mar 2020 –<br/>Aug 2022</th>
+              <td>
+                <strong>Competitive Programming Trainer</strong>, State University of Bangladesh.
+                Trained junior students for programming contests.
+              </td>
+            </tr>
+            <tr>
+              <th>2021–2024</th>
+              <td>
+                <strong>Problem Setter</strong>, Dept. of CSE, State University of Bangladesh. Wrote problems for four ICPC-style contests on Toph:
+                <ul style="margin-top: 0.4rem; padding-left: 1.1rem; list-style: disc;">
+                  <li><a href="https://toph.co/contests/training/qj6hper" target="_blank" rel="noopener noreferrer">SUB CSE Tech Carnival 2024 Programming Contest</a></li>
+                  <li><a href="https://toph.co/contests/training/bz6w3yt" target="_blank" rel="noopener noreferrer">SUB CSE FEST IDPC 2023</a></li>
+                  <li><a href="https://toph.co/contests/training/qbhcbhf" target="_blank" rel="noopener noreferrer">SUB Code-Byte Programming Contest v1.2</a> <span style="color:var(--text-muted); font-size:0.8rem;">(also Judge)</span></li>
+                  <li><a href="https://toph.co/contests/training/x6bg3qx" target="_blank" rel="noopener noreferrer">SUB Code-Byte Programming Contest v1.0</a> <span style="color:var(--text-muted); font-size:0.8rem;">(also Judge)</span></li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>Aug 2023</th>
+              <td>
+                <strong>Invited Speaker</strong>, <a href="https://www.linkedin.com/posts/state-university-of-bangladesh_programming-contest-coding-activity-7096428720575451136-jtFf" target="_blank" rel="noopener noreferrer"><em>Code Quest</em></a> Workshop on Competitive Programming,
+                Dept. of CSE, State University of Bangladesh. Invited back as an alumnus to speak on
+                algorithmic problem solving and contest preparation.
+              </td>
+            </tr>
+            <tr>
+              <th>2021–2022</th>
+              <td>
+                <strong>President</strong>, SUB Computing Club. Organized programming contests,
+                seminars and workshops for the CSE department, and led the 2022 department picnic
+                (200+ attendees), including securing sponsors.
+              </td>
+            </tr>
+          </table>
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- ===== AWARDS ===== -->
+      <section id="awards">
+        <h2>awards &amp; achievements</h2>
+
+        <h3 class="sub-heading">academic</h3>
+        <div class="news-table">
+          <table>
+            <tr>
+              <th>Nov 2022</th>
+              <td><strong>Dean's Award (Silver Medal)</strong> — 6th SUB Convocation, State University of Bangladesh.</td>
+            </tr>
+            <tr>
+              <th>2018–2022</th>
+              <td><strong>Batch Topper</strong> — Highest CGPA in the batch, B.Sc. Computer Science &amp; Engineering.</td>
+            </tr>
+            <tr>
+              <th>2018–2022</th>
+              <td><strong>Merit Scholarship</strong> — Awarded in every semester of the degree.</td>
+            </tr>
+          </table>
+        </div>
+
+        <h3 class="sub-heading">competitive programming</h3>
+        <div class="news-table">
+          <table>
+            <tr>
+              <th>2019–2021</th>
+              <td>
+                <strong>Honorable Mention ×3</strong> — ICPC Dhaka Regional
+                (<a href="https://icpc.global/regionals/finder/Dhaka-2020/standings" target="_blank" rel="noopener noreferrer">2019</a>,
+                <a href="https://icpc.global/regionals/finder/Dhaka-2021/standings" target="_blank" rel="noopener noreferrer">2020</a>,
+                <a href="https://icpc.global/regionals/finder/Dhaka-2022/standings" target="_blank" rel="noopener noreferrer">2021</a>). Teams SUB_BackSlash, SUB_Prefix, SUB_Goodbye.
+              </td>
+            </tr>
+            <tr>
+              <th>2021</th>
+              <td>Top <strong>8%</strong> globally — Facebook Hacker Cup, rank 2826 of 35,000+.</td>
+            </tr>
+            <tr>
+              <th>2022</th>
+              <td>Qualified to <strong>Round 1</strong>, Google Code Jam.</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="cp-profiles" style="margin-top: 1rem;">
+          <a href="https://codeforces.com/profile/PrimeX" target="_blank" rel="noopener noreferrer" class="cp-link">
+            <strong>Codeforces</strong> · PrimeX · Specialist
+          </a>
+          <a href="https://leetcode.com/u/PrimeX/" target="_blank" rel="noopener noreferrer" class="cp-link">
+            <strong>LeetCode</strong> · PrimeX
+          </a>
+          <a href="https://github.com/joysarker39/ProblemSolvingStats" target="_blank" rel="noopener noreferrer" class="cp-link">
+            <strong>Problem Solving</strong> · <strong>2000+</strong> problems solved across all judges
+          </a>
+        </div>
+
+      </section>
+
+      <hr />
+
+      <!-- ===== SKILLS ===== -->
+      <section id="skills">
+        <h2>skills</h2>
+        <div class="skills-table">
+          <div class="skill-row">
+            <span class="skill-label">Languages</span>
+            <span class="skill-val">Python · Java · C/C++ · JavaScript</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-label">ML</span>
+            <span class="skill-val">scikit-learn</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-label">Testing</span>
+            <span class="skill-val">JUnit · Playwright · Security testing</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-label">Backend</span>
+            <span class="skill-val">Spring MVC · Spring Boot · JPA/Hibernate · JSP/Servlets · React</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-label">Databases</span>
+            <span class="skill-val">Oracle SQL · MySQL · JDBC</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-label">Tools</span>
+            <span class="skill-val">Git · Gradle · Docker · Agile/Scrum</span>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- ===== CONTACT ===== -->
+      <section id="contact">
+        <h2>contact</h2>
+        <p>
+          I'm always glad to talk about agentic AI, verification, and algorithms. Feel free to
+          reach out.
+        </p>
+        <div class="contact-info">
+          <p><i class="fa-solid fa-envelope"></i> <a href="mailto:joysarker39@gmail.com">joysarker39 [at] gmail.com</a></p>
+          <p><i class="fa-solid fa-building-columns"></i> <a href="mailto:joy.cse.47003@sub.ac.bd">joy.cse.47003 [at] sub.ac.bd</a> <span class="contact-alt">(university)</span></p>
+          <p><i class="fa-solid fa-map-marker-alt"></i> Dhaka, Bangladesh</p>
+        </div>
+        <div class="social-links social-links-contact">
+          <a href="mailto:joysarker39@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://github.com/joysarker39" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/joysarker39/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </section>
+
+    </div><!-- /.post -->
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-inner">
+      <span>© 2026 Joy Sarker</span>
+      <span>·</span>
+      <span>Last updated: September 2026</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
