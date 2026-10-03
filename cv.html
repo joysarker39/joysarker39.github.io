@@ -3,7 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Joy Sarker">
+  <meta name="description" content="Curriculum vitae of Joy Sarker, Software Engineer II at Therap (BD) Ltd.">
   <title>Joy Sarker | CV</title>
+
+  <!-- Favicon (inline, no extra request) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%230075b4'/%3E%3Ctext x='50' y='70' font-family='Georgia,serif' font-size='58' fill='white' text-anchor='middle'%3EJ%3C/text%3E%3C/svg%3E">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +22,8 @@
   <script>
     // Set theme before paint to avoid flash
     (function () {
-      const saved = localStorage.getItem('theme');
+      let saved = null;
+      try { saved = localStorage.getItem('theme'); } catch (e) { /* storage blocked */ }
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
       const theme = saved || (prefersDark ? 'dark' : 'light');
       document.documentElement.setAttribute('data-theme', theme);
@@ -33,7 +39,7 @@
       <div class="nav-inner">
         <a href="index.html" class="nav-brand">Joy Sarker</a>
         <button id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
-          <i class="fa-solid fa-moon" id="themeIcon"></i>
+          <i aria-hidden="true" class="fa-solid fa-moon" id="themeIcon"></i>
         </button>
         <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
           <span></span><span></span><span></span>
@@ -42,6 +48,7 @@
           <li><a href="index.html#about">about</a></li>
           <li><a href="index.html#research">research</a></li>
           <li><a href="index.html#projects">projects</a></li>
+          <li><a href="index.html#education">education</a></li>
           <li><a href="index.html#experience">experience</a></li>
           <li><a href="index.html#teaching">teaching</a></li>
           <li><a href="index.html#awards">awards</a></li>
@@ -50,7 +57,7 @@
         </ul>
       </div>
       <!-- Scroll progress bar sits at the bottom of the nav -->
-      <progress id="progress" value="0" max="100"></progress>
+      <progress id="progress" value="0" max="100" aria-hidden="true"></progress>
     </nav>
   </header>
 
@@ -61,7 +68,7 @@
       <section id="cv">
         <header class="post-header cv-header">
           <h1 class="post-title">Curriculum Vitae</h1>
-          <a href="Joy_Sarker_CV.pdf" download class="btn-cv"><i class="fa-solid fa-file-pdf"></i> Download PDF</a>
+          <a href="Joy_Sarker_CV.pdf" download class="btn-cv"><i aria-hidden="true" class="fa-solid fa-file-pdf"></i> Download PDF</a>
         </header>
 
         <!-- Pages are drawn here by PDF.js, so the viewer works the same on phones and desktops -->
@@ -78,7 +85,7 @@
     <div class="footer-inner">
       <span>© 2026 Joy Sarker</span>
       <span>·</span>
-      <span>Last updated: September 2026</span>
+      <span>Last updated: October 2026</span>
     </div>
   </footer>
 

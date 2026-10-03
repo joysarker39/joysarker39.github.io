@@ -8,14 +8,16 @@ const themeIcon = document.getElementById('themeIcon');
 function applyTheme(theme) {
   html.setAttribute('data-theme', theme);
   themeIcon.className = theme === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
-  localStorage.setItem('theme', theme);
 }
 
 // Icon is set on load; theme already set by inline script in <head>
 applyTheme(html.getAttribute('data-theme') || 'light');
 
+// Only a click is saved, so visitors who never click keep following their device setting
 themeToggle.addEventListener('click', () => {
-  applyTheme(html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+  const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  applyTheme(next);
+  try { localStorage.setItem('theme', next); } catch (e) { /* storage blocked */ }
 });
 
 // ============================================================
@@ -47,8 +49,9 @@ window.addEventListener('scroll', () => {
 // ============================================================
 // ACTIVE NAV LINK ON SCROLL
 // ============================================================
-const sections = document.querySelectorAll('section[id]');
+// Only sections with a nav link are watched, so the last link stays lit through sections without one
 const navAs    = document.querySelectorAll('.nav-links a[href^="#"]');
+const sections = [...navAs].map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -62,3 +65,9 @@ const observer = new IntersectionObserver(entries => {
 }, { rootMargin: '-30% 0px -60% 0px', threshold: 0 });
 
 sections.forEach(s => observer.observe(s));
+
+// The last section is too short to reach that band, so its link is lit at the bottom of the page
+window.addEventListener('scroll', () => {
+  const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+  if (atBottom) navAs.forEach((a, i) => a.classList.toggle('active', i === navAs.length - 1));
+}, { passive: true });
